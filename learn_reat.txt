@@ -1,0 +1,73 @@
+###################
+## 1- useState
+##################
+
+import {useState} from 'react
+
+## it is better to path a function to just run one time at the beginning
+const [state,setState] = useState( ()=> )
+
+<button onClick={ ()=>{ (prevState)=>setState(prevState+1) } }
+
+###################
+## 2- useEffect
+##################
+
+## this do an action that will run every render (rerun, click, others) in the page
+## depending on some conditions
+
+## 1- case1 >> everytime the page renders
+
+useEffect( ()=>{
+    console.log("run every time)
+} )
+
+## 2- case2 >> only the first time the page renders
+
+useEffect( ()=>{
+    console.log("only the first time the page renders")
+},[] )
+
+## 3- case3 >> depeding on anthor state
+
+useEffect( ()=>{
+    console.log("depending on state color")
+},[color] )
+
+###################
+## 3- useMemo
+###################
+
+## 1- it works as a cash that it save the last ouput of some 
+## solw operation, so if u enter the same input again,
+## it will render that output without recalculate that slow operation
+
+## 2- we use it also to solve the problem of referntial equality,
+## in which react may behave with differnet objects depending on 
+## theri location on the memory not their value, so in case of changing
+# some stuff using useEffect depending on state1, and in case state2
+## changes, this action may be implemented too, so we have to use
+## useMemo
+
+
+
+
+
+
+
+
+
+
+
+###################
+## React Router
+###################
+
+>> Route, Routes, Link, Outlet, NavLink (isActive, .active), Navigate
+
+>> useParams , useOutletContext, useRoutes, 
+useNAvigate, useSearchParam,useLocation
+
+>> replace, reloadDocument, state
+
+>>setTimeOut

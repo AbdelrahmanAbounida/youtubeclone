@@ -1,0 +1,21 @@
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-top:20px;
+}
+
+
+.cat-btn:hover {
+    color:white !important;
+    background-color: #FC1503 !important;
+    opacity: 1;
+}
+.cat-btn:hover *{
+    color:white;
+}
+
+.MuiPaginationItem-root{
+    color: #FFF !important;
+}
